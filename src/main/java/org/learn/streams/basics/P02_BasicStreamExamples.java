@@ -20,7 +20,7 @@ public class P02_BasicStreamExamples {
         List<Integer> numbers = Arrays.asList(1, 2, 3, 4, 5, 6, 7, 8, 9, 10);
         List<Integer> evenNumbers = numbers.stream()
                 .filter(n -> n % 2 == 0)
-                .collect(Collectors.toList());
+                .toList();
         System.out.println("Original: " + numbers);
         System.out.println("Evens: " + evenNumbers + "\n");
 
@@ -28,7 +28,7 @@ public class P02_BasicStreamExamples {
         System.out.println("2. Map - Square Numbers:");
         List<Integer> squared = numbers.stream()
                 .map(n -> n * n)
-                .collect(Collectors.toList());
+                .toList();
         System.out.println("Squared: " + squared + "\n");
 
         // Example 3: Filter + Map combined
@@ -36,7 +36,7 @@ public class P02_BasicStreamExamples {
         List<Integer> squaredEvens = numbers.stream()
                 .filter(n -> n % 2 == 0)
                 .map(n -> n * n)
-                .collect(Collectors.toList());
+                .toList();
         System.out.println("Even numbers squared: " + squaredEvens + "\n");
 
         // Example 4: Map to String
@@ -44,15 +44,14 @@ public class P02_BasicStreamExamples {
         List<String> words = Arrays.asList("hello", "world", "stream", "api");
         List<String> upperCase = words.stream()
                 .map(String::toUpperCase)
-                .collect(Collectors.toList());
+                .toList();
         System.out.println("Uppercase: " + upperCase + "\n");
 
         // Example 5: Collect to Set (unique values)
         System.out.println("5. Collect to Set - Unique Values:");
         List<Integer> duplicates = Arrays.asList(1, 2, 2, 3, 3, 3, 4, 4);
         System.out.println("Original: " + duplicates);
-        System.out.println("Unique: " + duplicates.stream()
-                .collect(Collectors.toSet()) + "\n");
+        System.out.println("Unique: " + duplicates.stream().collect(Collectors.toSet()) + "\n");
     }
 }
 

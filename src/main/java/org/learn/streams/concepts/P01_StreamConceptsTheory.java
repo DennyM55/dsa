@@ -6,7 +6,7 @@ import java.util.stream.Collectors;
 /**
  * 01 - Stream API Concepts and Theory
  * START HERE - Covers: What is Stream API, Why introduced, core concepts
- * 
+ * <p>
  * Topics:
  * - What is Stream API?
  * - Why was Stream API introduced?
@@ -44,10 +44,10 @@ public class P01_StreamConceptsTheory {
 
         // Demo: Comparison of traditional vs Stream approach
         List<Integer> numbers = Arrays.asList(1, 2, 3, 4, 5, 6, 7, 8, 9, 10);
-        
+
         System.out.println("3. Traditional vs Stream Approach:");
         System.out.println("   Task: Filter even numbers and square them\n");
-        
+
         System.out.println("   Traditional way:");
         List<Integer> result1 = new java.util.ArrayList<>();
         for (int num : numbers) {
@@ -56,7 +56,7 @@ public class P01_StreamConceptsTheory {
             }
         }
         System.out.println("   " + result1);
-        
+
         System.out.println("\n   Stream way:");
         List<Integer> result2 = numbers.stream()
                 .filter(n -> n % 2 == 0)
@@ -69,31 +69,33 @@ public class P01_StreamConceptsTheory {
         System.out.println("   filter() - Selects elements matching a condition");
         System.out.println("            - Reduces stream size based on condition");
         System.out.println("            - Example: filter(n -> n > 5)\n");
-        
+
         System.out.println("   map() - Transforms each element to another value");
         System.out.println("         - Doesn't change stream size");
         System.out.println("         - Example: map(n -> n * 2)\n");
-        
+
         List<Integer> nums = Arrays.asList(1, 2, 3, 4, 5);
         System.out.println("   Original: " + nums);
-        System.out.println("   filter(n > 3): " + 
-                nums.stream().filter(n -> n > 3).collect(Collectors.toList()));
-        System.out.println("   map(n * 2): " + 
-                nums.stream().map(n -> n * 2).collect(Collectors.toList()) + "\n");
+        System.out.println("   filter(n > 3): " +
+                nums.stream().filter(n -> n > 3).toList());
+        System.out.println("   map(n * 2): " +
+                nums.stream().map(n -> n * 2).toList() + "\n");
 
         // Concept 5: Difference between map() and flatMap()
         System.out.println("5. Difference between map() and flatMap():");
         System.out.println("   map() - Transforms each element (1-to-1 mapping)");
         System.out.println("   flatMap() - Maps each element to a stream, then flattens all streams\n");
-        
+
         List<List<Integer>> nested = Arrays.asList(
                 Arrays.asList(1, 2),
                 Arrays.asList(3, 4),
                 Arrays.asList(5, 6)
         );
         System.out.println("   Nested list: " + nested);
-        System.out.println("   flatMap(): " + 
-                nested.stream().flatMap(List::stream).collect(Collectors.toList()) + "\n");
+        System.out.println("   flatMap(): " +
+                nested.stream()
+                        .flatMap(Collection::stream)
+                        .toList() + "\n");
 
         // Concept 6: Intermediate vs Terminal operations
         System.out.println("6. Intermediate vs Terminal Operations:");
@@ -108,7 +110,7 @@ public class P01_StreamConceptsTheory {
         System.out.println("   Streams are lazy - operations are not executed until a terminal");
         System.out.println("   operation is called. Intermediate operations are only executed");
         System.out.println("   when needed to produce the final result.\n");
-        
+
         System.out.println("   Example (with terminal operation):");
         numbers.stream()
                 .filter(n -> {
@@ -119,7 +121,7 @@ public class P01_StreamConceptsTheory {
                     System.out.println("   map called for: " + n);
                     return n * 2;
                 })
-                .collect(Collectors.toList());
+                .toList();
         System.out.println();
 
         // Concept 8: Functional Interface
@@ -139,6 +141,8 @@ public class P01_StreamConceptsTheory {
         System.out.println("    Methods: isPresent(), get(), orElse(), orElseThrow(),");
         System.out.println("             ifPresent(), ifPresentOrElse(), map(), flatMap()");
         System.out.println("    WHY: Avoids NullPointerException, forces explicit null handling\n");
+
+
     }
 }
 
