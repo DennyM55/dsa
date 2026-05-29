@@ -162,7 +162,105 @@ java -cp target/classes org.learn.OptionalAndMiscStreamProblems
 
 ---
 
-## Stream API Examples by Complexity Level
+## String and Array Coding Problems
+
+Comprehensive coverage of classic string and array problems with both traditional and Stream-based solutions.
+
+### 📝 String Coding Problems
+
+**StringCodingProblems**
+Master core string manipulation:
+1. Reverse a string
+2. Reverse string without built-in function
+3. Check palindrome
+4. Longest common prefix in string array
+5. Count and index vowels (Stream)
+6. Extract first letter of each word → "Java Stream API" → "JSA"
+7. First non-repeating character (Stream)
+8. First repeating character (Stream)
+9. Group anagrams
+10. Character frequency (sorted by count)
+
+```bash
+java -cp target/classes org.learn.StringCodingProblems
+```
+
+---
+
+### 🔢 Array Coding Problems
+
+**ArrayCodingProblems**
+Solve fundamental array problems:
+1. Find second largest / second highest number
+2. Largest element in array
+3. Maximum subarray sum (Kadane's Algorithm)
+4. Missing number from 1 to n
+5. Remove duplicates from sorted array
+6. Find pair sum / two sum
+7. Product of array except self
+8. Join two arrays and remove duplicates
+9. Partition equal subset sum
+10. Elements greater than adjacent
+11. Array sum and average
+12. Rotate array by k positions
+
+```bash
+java -cp target/classes org.learn.ArrayCodingProblems
+```
+
+---
+
+### 🔍 Advanced Array Problems
+
+**AdvancedArrayProblems**
+Complex array operations and searching:
+1. Binary search
+2. Search in rotated sorted array
+3. Check if array is rotated
+4. Find first and last position of element
+5. Integer square root
+6. Find peak element
+7. Median of two sorted arrays
+8. Search for a range (all occurrences)
+9. Smallest missing positive
+10. Find duplicate number
+11. Single number (XOR trick)
+
+```bash
+java -cp target/classes org.learn.AdvancedArrayProblems
+```
+
+---
+
+### 💧 Stream-Based String and Array Problems
+
+**StreamStringArrayProblems**
+Functional programming style solutions using Streams:
+1. Reverse string using streams
+2. Reverse array using streams
+3. Count vowels and positions (Stream)
+4. Extract acronyms (first letters)
+5. Capitalize words (Stream)
+6. Filter and map numbers
+7. Remove duplicates (Stream)
+8. Convert strings to uppercase
+9. Sort strings by length
+10. Group strings by first character
+11. Find longest string
+12. Character frequency (Stream)
+13. Average of array (Stream)
+14. Min and Max of array (Stream)
+15. Extract integers from string
+16. Join array elements with separator
+17. String to character list
+18. Count words starting with character
+19. Filter palindromes
+
+```bash
+java -cp target/classes org.learn.StreamStringArrayProblems
+```
+
+---
 
 ### Beginner Level
 - **BasicStreamExamples** - Filter, map, collect fundamentals
@@ -191,7 +289,7 @@ java -cp target/classes org.learn.OptionalAndMiscStreamProblems
 # Compile all classes
 mvn clean compile
 
-# Run Stream Concepts (Theory)
+# Stream Concepts (Theory)
 java -cp target/classes org.learn.StreamConceptsTheory
 
 # Basic Stream Operations
@@ -200,12 +298,18 @@ java -cp target/classes org.learn.IntermediateStreamExamples
 java -cp target/classes org.learn.TerminalStreamExamples
 java -cp target/classes org.learn.AdvancedStreamExamples
 
-# Practical Stream Problems
+# Stream-based Problems
 java -cp target/classes org.learn.StringStreamProblems
 java -cp target/classes org.learn.NumberStreamProblems
 java -cp target/classes org.learn.EmployeeStreamProblems
 java -cp target/classes org.learn.DataTransformationStreamProblems
 java -cp target/classes org.learn.OptionalAndMiscStreamProblems
+
+# String and Array Coding Problems
+java -cp target/classes org.learn.StringCodingProblems
+java -cp target/classes org.learn.ArrayCodingProblems
+java -cp target/classes org.learn.AdvancedArrayProblems
+java -cp target/classes org.learn.StreamStringArrayProblems
 
 # Real-world Examples
 java -cp target/classes org.learn.PracticalStreamExamples
@@ -238,8 +342,14 @@ src/main/java/org/learn/
 ├── DataTransformationStreamProblems.java        # List-Map conversions, flattening
 ├── OptionalAndMiscStreamProblems.java           # Optional handling, searches
 │
-└── Real-world Examples:
-    └── PracticalStreamExamples.java             # Product inventory management
+├── String & Array Coding:
+├── StringCodingProblems.java                    # Reverse, palindrome, longest prefix
+├── ArrayCodingProblems.java                     # Second largest, max sum, missing number
+├── AdvancedArrayProblems.java                   # Binary search, rotated arrays
+├── StreamStringArrayProblems.java               # Stream-based string/array solutions
+│
+├── Real-world Examples:
+└── PracticalStreamExamples.java                 # Product inventory management
 ```
 
 ---
@@ -308,6 +418,89 @@ src/main/java/org/learn/
 ✅ **Parallel friendly** - parallel() for easy parallelization
 
 ✅ **Type safe** - Full static type checking
+
+---
+
+## Topics Covered
+
+### Stream API Concepts (11 topics)
+✓ What is Stream API?
+✓ Why was Stream API introduced?
+✓ Different between map() and filter()
+✓ Difference between map() and flatMap()
+✓ Intermediate vs Terminal operations
+✓ Lazy evaluation
+✓ Functional interfaces
+✓ Lambda expressions
+✓ Default methods in interfaces
+✓ Optional and its usage
+✓ All stream operations (filter, map, reduce, collect, etc.)
+
+### String Problems (10 topics)
+✓ Reverse a string
+✓ Longest common prefix in string array
+✓ Check palindrome
+✓ Count vowels and index positions (Stream)
+✓ Extract first letter of each word (Acronym)
+✓ First non-repeating character
+✓ First repeating character
+✓ Group anagrams
+✓ Character frequency
+✓ Various string manipulations with Streams
+
+### Array Problems (20+ topics)
+✓ Find second largest / second highest number
+✓ Missing number from 1 to n
+✓ Maximum subarray sum (Kadane's Algorithm)
+✓ Remove duplicates from sorted array
+✓ Find pair sum / two sum
+✓ Product of array except self
+✓ Partition equal subset sum
+✓ Join two arrays and remove duplicates
+✓ Largest element in array
+✓ Binary search
+✓ Search in rotated sorted array
+✓ First and last position of element
+✓ Peak element
+✓ Median of two sorted arrays
+✓ Smallest missing positive
+✓ Find duplicate number
+✓ Single number (XOR)
+✓ Array rotation
+✓ Integer square root
+✓ And more...
+
+### Stream-Based Solutions (19 topics)
+✓ Reverse string/array using Streams
+✓ Vowel counting with positions
+✓ Extract acronyms
+✓ Capitalize words
+✓ Filter and map operations
+✓ Remove duplicates
+✓ String sorting and grouping
+✓ Character extraction
+✓ Palindrome filtering
+✓ And more functional programming patterns
+
+---
+
+## Interview Preparation
+
+This repository covers topics frequently asked in technical interviews:
+- LeetCode Easy to Hard problems
+- Stream API mastery
+- Big O complexity optimization
+- Array and String manipulation
+- Search algorithms
+- Data structure operations
+- Functional programming concepts
+
+Perfect for:
+- Java developer interviews
+- Backend engineering roles
+- Data structures & algorithms practice
+- Stream API proficiency
+- Coding challenge preparation
 
 ---
 
