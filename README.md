@@ -1,30 +1,208 @@
-# DSA Practice (Java)
+# DSA Learning Path (Java)
 
-This repository is for learning and practicing:
+```
+This repository contains a STRUCTURED LEARNING PATH for Java and DSA mastery.
+All classes are numbered (P01, P02, ..., P15) in recommended study order.
+Organized into packages by topic for clarity and ease of navigation.
+```
 
-- Data Structures and Algorithms (DSA) problems
-- Modern Java features (latest Java version)
-- Stream API and functional-style coding
+## ⭐ START HERE: Learning Guide
 
-## Goals
+Run this first to understand the complete learning path:
 
-- Build strong problem-solving skills with DSA questions
-- Practice writing clean, efficient Java solutions
-- Use modern Java features in real examples
-- Master Java 8 Stream API concepts and patterns
+```bash
+mvn clean compile
+java -cp target/classes org.learn.LEARNING_PATH
+```
 
-## Tech Stack
-
-- Java 21
-- Maven
+This will show you:
+- All 15 classes in recommended order
+- 5 learning phases  
+- Quick start commands
+- Study paths by goal
 
 ---
 
-## Java 8 Stream API Complete Learning Guide
+## 📚 Complete Learning Path
 
-Comprehensive stream examples covering all concepts from basics to advanced real-world problems.
+### Phase 1: Stream API Foundations (4 classes)
 
-### 📚 Core Concepts (Theory)
+**01 | Stream Concepts & Theory** `org.learn.streams.concepts`
+```bash
+java -cp target/classes org.learn.streams.concepts.P01_StreamConceptsTheory
+```
+- What is Stream API? Why introduced?
+- map() vs filter() vs flatMap()
+- Intermediate vs Terminal operations
+- Lazy evaluation
+- Functional interfaces & Lambda expressions
+- Optional and its usage
+
+**02 | Basic Stream Examples** `org.learn.streams.basics`
+```bash
+java -cp target/classes org.learn.streams.basics.P02_BasicStreamExamples
+```
+- filter() - Select elements
+- map() - Transform elements
+- collect() - Gather results
+- Combining operations
+
+**03 | Intermediate Stream Operations** `org.learn.streams.intermediate`
+```bash
+java -cp target/classes org.learn.streams.intermediate.P03_IntermediateStreamExamples
+```
+- distinct() - Remove duplicates
+- sorted() - Sort elements
+- limit() - Take first N
+- skip() - Skip first N
+- peek() - Debug/inspect
+
+**04 | Terminal Stream Operations** `org.learn.streams.intermediate`
+```bash
+java -cp target/classes org.learn.streams.intermediate.P04_TerminalStreamExamples
+```
+- count() - Total elements
+- max() / min() - Extremes
+- reduce() - Aggregate
+- forEach() - Iterate
+- anyMatch() / allMatch() / noneMatch()
+- findFirst() / findAny()
+
+---
+
+### Phase 2: Advanced Stream & Practical Problems (7 classes)
+
+Classes **P05-P11** cover:
+- Advanced operations (flatMap, groupingBy, partitioningBy)
+- Practical scenarios (employees, products, inventory)
+- Stream-based problem solving
+- Optional handling & null-safety
+
+---
+
+### Phase 3: String Coding Problems
+
+**12 | String Coding Problems** `org.learn.strings`
+```bash
+java -cp target/classes org.learn.strings.P12_StringCodingProblems
+```
+- Reverse string
+- Check palindrome
+- Longest common prefix
+- Count vowels (Stream)
+- Extract acronyms
+- First non-repeating character
+- First repeating character
+- Group anagrams
+
+---
+
+### Phase 4: Array Coding Problems
+
+**13 | Array Coding Problems** `org.learn.arrays`
+```bash
+java -cp target/classes org.learn.arrays.P13_ArrayCodingProblems
+```
+- Find second largest
+- Maximum subarray sum (Kadane's)
+- Missing number
+- Remove duplicates
+- Two Sum / Find pair
+- Product of array except self
+- Join arrays and deduplicate
+
+**14 | Advanced Array Problems** `org.learn.arrays`
+```bash
+java -cp target/classes org.learn.arrays.P14_AdvancedArrayProblems
+```
+- Binary search
+- Search in rotated sorted array
+- Find first/last position
+- Integer square root
+- Peak element
+- Median of sorted arrays
+- Smallest missing positive
+- Single number (XOR trick)
+
+---
+
+### Phase 5: Stream-Based String & Array Solutions
+
+**15 | Stream String & Array Problems** `org.learn.strings`
+```bash
+java -cp target/classes org.learn.strings.P15_StreamStringArrayProblems
+```
+- Reverse string/array using Streams
+- Vowel counting & positions
+- Extract acronyms
+- Capitalize words
+- Filter and map operations
+- Remove duplicates
+- String grouping/sorting
+- Palindrome filtering
+- Character frequency
+- Min/Max operations
+
+---
+
+## 📁 Project Structure
+
+```
+src/main/java/org/learn/
+├── LEARNING_PATH.java                    ← START HERE!
+├── Main.java                             (original starter)
+│
+├── streams/
+│   ├── concepts/
+│   │   └── P01_StreamConceptsTheory.java
+│   ├── basics/
+│   │   └── P02_BasicStreamExamples.java
+│   ├── intermediate/
+│   │   ├── P03_IntermediateStreamExamples.java
+│   │   └── P04_TerminalStreamExamples.java
+│   └── advanced/
+│       ├── P05_AdvancedStreamExamples.java
+│       ├── P06_PracticalStreamExamples.java
+│       ├── P07_StringStreamProblems.java
+│       ├── P08_NumberStreamProblems.java
+│       ├── P09_EmployeeStreamProblems.java
+│       ├── P10_DataTransformationStreamProblems.java
+│       └── P11_OptionalAndMiscStreamProblems.java
+│
+├── strings/
+│   ├── P12_StringCodingProblems.java
+│   └── P15_StreamStringArrayProblems.java
+│
+└── arrays/
+    ├── P13_ArrayCodingProblems.java
+    └── P14_AdvancedArrayProblems.java
+```
+
+---
+
+## 🎯 Study Paths by Goal
+
+### Goal: Master Stream API
+**Path**: P01 → P02 → P03 → P04 → (P05-P11)  
+**Time**: 2-3 hours  
+**Focus**: Stream operations, functional programming
+
+### Goal: Interview Preparation  
+**Path**: P01-P02 → P12 → P13-P14 → P15  
+**Time**: 1.5-2 hours  
+**Focus**: Problem-solving, algorithm optimization
+
+### Goal: Complete DSA + Streams  
+**Path**: P01 → P02 → P03 → P04 → ... → P15  
+**Time**: 4-5 hours  
+**Focus**: End-to-end comprehensive learning
+
+### Goal: Quick Streams Overview
+**Path**: P01 → P02 → P03 → P04  
+**Time**: 45 minutes  
+**Focus**: Core concepts only
+
+---
 
 **StreamConceptsTheory**
 Answers to all key Stream API concepts:
