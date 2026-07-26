@@ -2,6 +2,9 @@ package org.learn;
 
 // Problem 001: Find the total number of digits required to write all numbers from 1 to n.
 
+import java.util.Scanner;
+import java.util.stream.IntStream;
+
 public class P001_TotalDigits {
 
     static int totalDigits(int n) {
@@ -21,7 +24,16 @@ public class P001_TotalDigits {
     }
 
     public static void main(String[] args) {
-        int n = 13;
+        Scanner scanner = new Scanner(System.in);
+        int n = scanner.nextInt();
         System.out.println(totalDigits(n));
+        System.out.println(totalDigitStream(n));
+    }
+
+    private static int totalDigitStream(int n) {
+        return IntStream.rangeClosed(1, n)
+                .mapToObj(String::valueOf)
+                .mapToInt(String::length)
+                .sum();
     }
 }
