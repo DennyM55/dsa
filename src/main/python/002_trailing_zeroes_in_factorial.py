@@ -9,7 +9,6 @@ def trailing_zeroes(n: int) -> int:
         number_of_fives = n // divisor
         zero_count = zero_count + number_of_fives
         divisor = divisor * 5
-
     return zero_count
 
 
