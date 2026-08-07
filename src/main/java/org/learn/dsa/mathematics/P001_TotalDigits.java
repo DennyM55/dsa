@@ -1,4 +1,4 @@
-package org.learn;
+package org.learn.dsa.mathematics;
 
 // Problem 001: Find the total number of digits required to write all numbers from 1 to n.
 

@@ -1,4 +1,4 @@
-package org.learn;
+package org.learn.dsa.mathematics;
 
 // Problem 002: For an integer n, find the number of trailing zeroes in n!.
 

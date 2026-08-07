@@ -12,7 +12,7 @@
 
 ## 🎯 Mission & Core Goals
 
-- **📅 Daily Consistency**: Solving at least 1 problem every day to cultivate algorithmic intuition and technical rigor.
+- **📅 Daily Consistency**: 1 Concept + 1 Representative Problem Per Day — building pattern recognition for MAANG-level DSA interviews.
 - **🔄 Dual-Language Paradigm**:
   - **Java**: Mastering strong typing, object-oriented design, performance optimization, and clean structure.
   - **Python**: Leveraging clean logic, pythonic patterns, fast prototyping, and concise mathematical expressions.
@@ -26,14 +26,20 @@ The project maintains a clean, multi-language directory structure separating Jav
 
 ```
 dsa/
-├── pom.xml                                           # Maven Configuration (Java 21)
-├── README.md                                         # Project Overview & Tracker
-└── src/
-    └── main/
-        ├── java/
-        │   └── org/
-        │       └── learn/                            # Java Solutions (P001_..., P002_..., etc.)
-        └── python/                                   # Python Solutions (001_..., 002_..., etc.)
+├── README.md
+├── pom.xml
+├── notes/
+│   ├── roadmap.md
+│   ├── patterns.md
+│   └── revision-tracker.md
+├── src/main/java/org/learn/dsa/
+│   ├── mathematics/
+│   ├── arrays/
+│   └── ... (other topic folders)
+├── src/main/python/
+│   └── ... (same topic folders)
+└── docs/
+    └── problem-template.md
 ```
 
 ---
@@ -59,15 +65,15 @@ This repository systematically tracks problem-solving practice across core topic
 # 1. Compile Java source code
 mvn clean compile
 
-# 2. Run a solution class (Replace P001_TotalDigits with target class)
-java -cp target/classes org.learn.P001_TotalDigits
+# 2. Run a solution class (Replace with target class)
+java -cp target/classes org.learn.dsa.mathematics.P001_TotalDigits
 ```
 
 ### Python Solutions
 
 ```bash
 # Run any Python solution directly
-python src/main/python/001_total_digits.py
+python src/main/python/mathematics/001_total_digits.py
 ```
 
 ---
