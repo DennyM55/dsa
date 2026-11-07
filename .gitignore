@@ -1,0 +1,13 @@
+# IntelliJ IDEA project metadata (machine-specific)
+.idea/
+*.iml
+out/
+
+# Java compiler output
+*.class
+
+# Python caches and local environments
+__pycache__/
+*.py[cod]
+.venv/
+venv/
