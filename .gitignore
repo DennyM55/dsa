@@ -5,6 +5,7 @@ out/
 
 # Java compiler output
 *.class
+target/
 
 # Python caches and local environments
 __pycache__/
