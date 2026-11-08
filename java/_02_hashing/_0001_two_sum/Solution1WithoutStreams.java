@@ -4,7 +4,7 @@ import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
 
-public class Solution {
+public class Solution1WithoutStreams {
 
     public static int[] twoSum(int[] nums, int target) {
 
